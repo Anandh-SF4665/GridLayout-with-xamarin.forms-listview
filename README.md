@@ -5,14 +5,6 @@ This sample show case the grid layout in listview xamarin.forms
 
 ```xaml
 <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition Height="*" />
-    </Grid.RowDefinitions>
-    <Grid x:Name="headerGrid" BackgroundColor="#FFEEEEF2" HeightRequest="45">
-        . . .
-        . . .
-    </Grid>
     <syncfusion:SfListView x:Name="listView"
                     SelectionMode="Multiple"
                     Grid.Row="1"                              
@@ -27,23 +19,9 @@ This sample show case the grid layout in listview xamarin.forms
                 </Grid>
             </DataTemplate>
         </syncfusion:SfListView.ItemTemplate>
-
-        <syncfusion:SfListView.GroupHeaderTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <ViewCell.View>
-                        <code>
-                        . . .
-                        . . .
-                        <code>
-                    </ViewCell.View>
-                </ViewCell>
-            </DataTemplate>
-        </syncfusion:SfListView.GroupHeaderTemplate>
-    </syncfusion:SfListView>
 </Grid>
 
-Code behind:
+C#:
 protected override void OnSizeAllocated(double width, double height)
 {
     base.OnSizeAllocated(width, height);
@@ -65,3 +43,12 @@ protected override void OnSizeAllocated(double width, double height)
     }
 }
 ```
+## Requirements to run the demo
+
+* Xamarin add-ons for Visual Studio (available via the Visual Studio installer).
+
+## Troubleshooting
+
+### Path too long exception
+
+If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
